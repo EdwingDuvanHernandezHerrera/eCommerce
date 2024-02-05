@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
     <title>TierraAndina</title>
 </head>
 <body>
@@ -41,8 +41,68 @@
                 <li><a href="">Gastronomía</a></li>
             </ul>
             
-            <i class='bx bx-cart-alt'></i>
+            <a href="#" id="btnAbrirModal"><i class='bx bx-cart-alt'></i></a>
         </header>
+        <dialog id="carritoModal" class="modal">
+            <div class="modalContenido">
+                <h1>Detalles compras</h1>
+                <i class='bx bx-x' id="btnCerrarModal"></i>
+                <div class="compras">
+                    <img src="storage/img/ruanaBlanca.png" alt="">
+                    <h3>Ruana blanca</h4>
+                        <span>5</span>
+                        <h4>$99.990</h4>
+                        <h5>$$119.990</h5>
+                        <i class='bx bxs-trash'></i>
+                </div>
+                <div class="compras">
+                    <img src="storage/img/ruanaBlanca.png" alt="">
+                    <h3>Ruana blanca</h4>
+                        <span>5</span>
+                        <h4>$99.990</h4>
+                        <h5>$$119.990</h5>
+                        <i class='bx bxs-trash'></i>
+                </div>
+                <div class="compras">
+                    <img src="storage/img/ruanaBlanca.png" alt="">
+                    <h3>Ruana blanca</h4>
+                        <span>5</span>
+                        <h4>$99.990</h4>
+                        <h5>$$119.990</h5>
+                        <i class='bx bxs-trash'></i>
+                </div>                                
+                <div class="compras">
+                    <img src="storage/img/ruanaBlanca.png" alt="">
+                    <h3>Ruana blanca</h4>
+                        <span>5</span>
+                        <h4>$99.990</h4>
+                        <h5>$$119.990</h5>
+                        <i class='bx bxs-trash'></i>
+                </div>
+                <div class="compras">
+                    <img src="storage/img/ruanaBlanca.png" alt="">
+                    <h3>Ruana blanca</h4>
+                        <span>5</span>
+                        <h4>$99.990</h4>
+                        <h5>$$119.990</h5>
+                        <i class='bx bxs-trash'></i>
+                </div>
+                <div class="compras">
+                    <img src="storage/img/ruanaBlanca.png" alt="">
+                    <h3>Ruana blanca</h3>
+                        <span>5</span>
+                        <h4>$99.990</h4>
+                        <h5>$$119.990</h5>
+                        <i class='bx bxs-trash'></i>
+                </div>
+                <div class="totales">
+                    <h2>Total</h2>
+                    <h2>$$$$$</h2>
+                    <button><a href="#">Pagar</a></button>
+                </div>
+            </div>
+        </dialog>
+        
         <section class="categoria">
             <div class="contanierProducto">
                 <div class="containerImages">

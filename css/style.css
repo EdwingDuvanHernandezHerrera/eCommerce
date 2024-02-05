@@ -71,6 +71,14 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
 }
 
+#btnAbrirModal{
+    text-decoration: none;
+    color: var(--colorPrimary);
+    animation: menuFijo linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 200px;    
+
+}
 #check{
     display: none;
 }
@@ -270,6 +278,117 @@ header {
         color: var(--colorSecondary);
     }
 }
+
+/* -------------------------Modal------------------------ */
+
+.modal{
+    width: 80%;
+    max-width: 500px;
+    max-height: 70vh;
+    height: auto;
+    background-color: var(--colorSecondary);
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+}
+
+#carritoModal::backdrop{
+    background-color: rgba(0, 0, 0, .55);
+}
+.containerGeneral .modal .modalContenido{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border: 1px solid rgb(236, 233, 233);  
+    padding: 2vh 2vw;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1vh;
+}
+
+.containerGeneral .modal .modalContenido h1{
+    grid-column-start: span 4;
+    font-size: 1.5rem;
+}
+#btnCerrarModal{
+    font-size: 2rem;
+}
+
+.containerGeneral .modal .modalContenido .compras{
+    grid-column: 1/-1;
+    border: 1px solid rgb(177, 174, 174);
+    width: 90%;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr repeat(3, 2fr);
+    grid-template-areas: 
+        "image image nameProd nameProd iconElim"
+        "image image cantidad precio1 precio2";
+}
+.containerGeneral .modal .modalContenido .compras img{
+    grid-area: image;
+    width: 50%;
+    height: auto;
+}
+
+.containerGeneral .modal .modalContenido .compras h3{
+    grid-area: nameProd;
+    font-size: 1rem;
+}
+.containerGeneral .modal .modalContenido .compras h4{
+    grid-area: precio1;
+    font-size: .8rem;
+}
+.containerGeneral .modal .modalContenido .compras h5{
+    grid-area: precio2;
+    font-size: .6rem;
+    text-decoration: line-through;
+    color: gray;
+    justify-self: start;
+}
+.containerGeneral .modal .modalContenido .compras i{
+    grid-area: iconElim;
+
+}
+.containerGeneral .modal .modalContenido .compras span{
+    grid-area: cantidad;
+    font-size: .7rem;
+    font-family: sans-serif;
+}
+
+.containerGeneral .modal .modalContenido .totales{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-around;
+    border: 1px solid rgb(177, 174, 174);
+    width: 100%;
+    padding: 1vh 1vw;
+}
+.containerGeneral .modal .modalContenido .totales h2{
+    font-size: 1.3rem;    
+}
+
+.containerGeneral .modal .modalContenido .totales h2:nth-child(2){
+    justify-self: end;
+}
+
+.containerGeneral .modal .modalContenido .totales button{
+    grid-column-start: 2;
+    width: 70px;
+    justify-self: end;
+    background: var(--colorTwelveth);
+    border: none;
+    border-radius: 6px;
+}
+.containerGeneral .modal .modalContenido .totales button a{
+    color: var(--colorSecondary);
+    text-decoration: none;
+}
+
 
 
 /* --------------------Responsive--------------------------------- */
