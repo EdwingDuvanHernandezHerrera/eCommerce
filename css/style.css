@@ -468,6 +468,7 @@ header {
         justify-items: center;
         align-content: center;
         padding: 2vh 2vw;
+        column-gap: 1vw;
     }
     .containerGeneral section .contanierProducto .contanierContent{
         grid-template-rows: repeat(5, auto);
