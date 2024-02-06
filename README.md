@@ -35,3 +35,11 @@ Este repositorio contiene un proyecto desarrollado como prueba y aplicación de 
 3. Explora las diferentes categorías haciendo clic en los enlaces correspondientes.
 4. Experimenta con el carrito de compras y los modales para obtener o comprar productos.
 
+# Demos
+
+#### Demo resolución > 992px (.gift)
+
+https://github.com/EdwingDuvanHernandezHerrera/eCommerce/blob/main/storage/demoPC.gif
+
+#### Demo resolución < 992px (.gift)
+
