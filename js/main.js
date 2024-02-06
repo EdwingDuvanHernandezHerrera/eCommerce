@@ -20,3 +20,34 @@ btnAbrirModal.addEventListener("click", ()=>{
 btnCerrarModal.addEventListener("click", ()=>{
     modal.close();
 })
+
+
+const btnCerrarModalObt =  document.querySelector('#btnCerrarModalObt');
+const modalObt = document.querySelector('#obtenerModal');
+
+
+document.querySelectorAll(".boton").forEach(function(botonObt){
+    botonObt.addEventListener("click", function(){
+        modalObt.showModal();
+    })
+})
+
+btnCerrarModalObt.addEventListener("click", ()=>{
+    modalObt.close();
+})
+
+
+
+
+  function cambiarImagen(galeriaId, nuevaImagen) {
+    var imagenGrandeId = 'imagenGrande' + galeriaId;
+    document.getElementById(imagenGrandeId).src = nuevaImagen;
+  }
+
+  document.querySelectorAll('.miniaturasImg').forEach(function(miniatura) {
+    miniatura.addEventListener('click', function() {
+      var galeriaId = this.closest('.containerImages').id;
+      var nuevaImagen = this.getAttribute('src');
+      cambiarImagen(galeriaId, nuevaImagen);
+    });
+  });

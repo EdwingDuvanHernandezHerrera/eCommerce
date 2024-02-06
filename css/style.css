@@ -18,8 +18,6 @@
 
 *{
     font-size: 15px;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -28,10 +26,19 @@ body {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+p, a, span, li, ul, i, div{
+    margin:0;
+    padding:0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
 }
 
 
@@ -41,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
     grid-template-rows: 10vh auto minmax(70vh, auto);
     justify-content: center;
-    background-image:url("../storage/img/bgGris.png");
+    background-image:url("storage/img/bgGris.png");
     row-gap: 5vh;
 }
 
@@ -279,7 +286,7 @@ header {
     }
 }
 
-/* -------------------------Modal------------------------ */
+/* -------------------------Modal Carrito Compras------------------------ */
 
 .modal{
     width: 80%;
@@ -388,6 +395,107 @@ header {
     color: var(--colorSecondary);
     text-decoration: none;
 }
+
+/* --------------------Modal Obtener Producto------------------ */
+
+#obtenerModal{
+    width: 80%;
+    max-width: 500px;
+    max-height: 70vh;
+    height: auto;
+    background-color: var(--colorSecondary);
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+}
+
+#obtenerModal::backdrop{
+    background-color: rgba(0, 0, 0, .55);
+}
+
+.modalObt .modalContenidoObt{
+    display: grid;
+    row-gap: 2vh;
+    min-height: 80vh;
+    justify-items: start;
+    grid-template-areas: 
+    ". . . icono"
+    "imagen imagen imagen imagen"
+    "imagen imagen imagen imagen"
+    "imagen imagen imagen imagen"
+    "imagen imagen imagen imagen"
+    "name name name name"
+    "stars stars . ."
+    "parf parf parf parf"
+    "precio precio . ."
+    "input input boton boton";
+}
+
+.modalObt .modalContenidoObt #btnCerrarModalObt{
+    grid-area: icono;
+    justify-self: end;
+    font-size: 2rem;
+}
+.modalObt .modalContenidoObt img{
+    grid-area: imagen;
+    width: 50%;
+    justify-self: center;
+}
+.modalObt .modalContenidoObt h1{
+    grid-area: name;
+    font-size: 1.5rem;
+}
+.modalObt .modalContenidoObt .calificacion{
+    grid-area: stars;
+    font-size: 1.1rem;
+    display: grid;
+    width: 50%;
+    justify-content: space-around;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+.modalObt .modalContenidoObt p{
+    grid-area: parf;
+    
+}
+.modalObt .modalContenidoObt .precio{
+    grid-area: precio;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.modalObt .modalContenidoObt .precio h3{
+    font-size: 1.3rem;
+}
+.modalObt .modalContenidoObt .precio h4{
+    font-size: .9rem;
+    color: gray;
+    text-decoration: line-through;
+    align-self: end;
+
+}
+
+.modalObt .modalContenidoObt input{
+    grid-area: input;
+    width: 90%;
+    height: 20px;
+}
+.modalObt .modalContenidoObt button{
+    grid-area: boton;
+    width: 90%;
+    height: 20px;
+    justify-self: center;
+    background-color: var(--colorTenth);
+    border: none;
+
+}
+
+.modalObt .modalContenidoObt button a{
+    text-decoration: none;
+    color: var(--colorSecondary);
+}
+
+
+
 
 
 
