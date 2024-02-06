@@ -43,3 +43,4 @@ https://github.com/EdwingDuvanHernandezHerrera/eCommerce/blob/main/storage/demoP
 
 #### Demo resolución < 992px (.gift)
 
+https://github.com/EdwingDuvanHernandezHerrera/eCommerce/blob/main/storage/demoMovil.gif
